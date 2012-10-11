@@ -9,7 +9,7 @@
 	
 	
 	<script src="./assets/js/cordova-2.0.0.js"></script>
-<!--	<script src="./assets/js/phonegap-status-bar-notification.js"></script>-->
+	<script src="./assets/js/phonegap-status-bar-notification.js"></script>-
 	
 	<link rel="stylesheet" href="./assets/css/jquery.mobile-1.1.0.css" />
 	<script src="./assets/js/jquery-1.7.1.min.js"></script>
@@ -21,12 +21,79 @@
 	<link href='./assets/css/style.css' rel='stylesheet' type='text/css' />  
 
 
-<script type="text/javascript" charset="utf-8">
-	
-</script>
+ <script type="text/javascript" charset="utf-8">
+
+    // Wait for PhoneGap to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // PhoneGap is ready
+    //
+    function onDeviceReady() {
+        // Empty
+    }
+
+    // alert dialog dismissed
+    function alertDismissed() {
+        // do something
+    }
+
+    // Show a custom alert
+    //
+    function showAlert() {
+        navigator.notification.alert(
+            'You are the winner!',  // message
+            alertDismissed,         // callback
+            'Game Over',            // title
+            'Done'                  // buttonName
+        );
+    }
+
+    // process the confirmation dialog result
+    function onConfirm(button) {
+        alert('You selected button ' + button);
+    }
+
+    // Show a custom confirmation dialog
+    //
+    function showConfirm() {
+        navigator.notification.confirm(
+            'You are the winner!',  // message
+            onConfirm,              // callback to invoke with index of button pressed
+            'Game Over',            // title
+            'Restart,Exit'          // buttonLabels
+        );
+    }
+    // Show a custom alert
+    //
+    function showAlert2() {
+        navigator.notification.alert(
+            'You are the winner!',  // message
+            'Game Over',            // title
+            'Done'                  // buttonName
+        );
+    }
+
+    // Beep three times
+    //
+    function playBeep() {
+        navigator.notification.beep(3);
+    }
+
+    // Vibrate for 2 seconds
+    //
+    function vibrate() {
+        navigator.notification.vibrate(2000);
+    }
+
+    </script>
 </head>
 <body>
-	
+	<p><a href="#" onclick="showAlert(); return false;">Show Alert</a></p>
+    <p><a href="#" onclick="showConfirm(); return false;">Show Confirm</a></p>
+    <p><a href="#" onclick="showAlert2(); return false;">Show Alert</a></p>
+    <p><a href="#" onclick="playBeep(); return false;">Play Beep</a></p>
+    <p><a href="#" onclick="vibrate(); return false;">Vibrate</a></p>
 </body>
 
 </html>
