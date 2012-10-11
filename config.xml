@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns		= "http://www.w3.org/ns/widgets"
 	xmlns:gap	= "http://phonegap.com/ns/1.0"
-	id		= "com.tresfera.apparca"
+	id		= "com.tresfera.testingphonegap"
 	version 	= "1.0.13">
 
 	<name>Testing PhoneGap</name>
@@ -38,6 +38,6 @@
 	<preference name="orientation" value="portrait"/>
 	
 	
-	<<gap:plugin name="phonegap-status-bar-notification"/>
+	<gap:plugin name="phonegap-status-bar-notification"/>
 	
 </widget> 
