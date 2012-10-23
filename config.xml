@@ -36,8 +36,6 @@
 	<preference name="android-minSdkVersion" value="7"/>
 
 	<preference name="orientation" value="portrait"/>
-	
-	
-	<gap:plugin name="StatusBarNotification"/>
-	
+
+	<gap:plugin name="ChildBrowser" />
 </widget> 
